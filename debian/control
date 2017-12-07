@@ -2,13 +2,14 @@ Source: openbmp
 Section: net
 Priority: optional
 Maintainer: Vincent Bernat <bernat@debian.org>
-Build-Depends: debhelper (>= 10),
+Build-Depends: debhelper (>= 9),
                cmake,
                librdkafka-dev,
                libyaml-cpp-dev,
                zlib1g-dev,
                libssl-dev,
                libsasl2-dev,
+               dh-systemd,
 Standards-Version: 4.1.2
 Homepage: https://github.com/OpenBMP/openbmp
 Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/openbmp.git

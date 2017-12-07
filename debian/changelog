@@ -1,3 +1,9 @@
+openbmp (0.13.0-1~xenial0+exo1) xenial; urgency=medium
+
+  * Backport to Xenial.
+
+ -- Vincent Bernat <bernat@debian.org>  Thu, 07 Dec 2017 16:58:22 +0100
+
 openbmp (0.13.0-1) UNRELEASED; urgency=medium
 
   * Initial release. Closes: #883771.
