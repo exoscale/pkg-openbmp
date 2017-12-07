@@ -1,0 +1,28 @@
+Source: openbmp
+Section: net
+Priority: optional
+Maintainer: Vincent Bernat <bernat@debian.org>
+Build-Depends: debhelper (>= 10),
+               cmake,
+               librdkafka-dev,
+               libyaml-cpp-dev,
+               zlib1g-dev,
+               libssl-dev,
+               libsasl2-dev,
+Standards-Version: 4.1.2
+Homepage: https://github.com/OpenBMP/openbmp
+Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/openbmp.git
+Vcs-Git: https://alioth.debian.org/anonscm/git/collab-maint/openbmp.git
+
+Package: openbmp
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, adduser
+Description: BGP Monitoring Protocol (BMP) collector
+ OpenBMP is a collector for the BMP protocol. BMP devices (like
+ routers) send BMP messages to an OpenBMP instance. This instance will
+ parse those messages and dump them in a Kafka topic. Consumer
+ applications can extract them and store them in a database, in flat
+ files or use them for other purposes. Message format is specified in
+ the Message Bus API specification and is versioned.
+ .
+ This package contains the collector.

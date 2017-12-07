@@ -1,0 +1,3 @@
+0001-Do-not-look-for-.a-files-for-librdkafka-libyaml-cpp.patch
+0002-Remove-upstream-Debian-related-stuff.patch
+0003-Ensure-correct-PID-is-written-to-PID-file.patch

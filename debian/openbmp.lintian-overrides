@@ -1,0 +1,2 @@
+# Sorry, not writing a kludge script
+openbmp: init.d-script-not-included-in-package etc/init.d/openbmp

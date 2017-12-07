@@ -1,0 +1,39 @@
+From: Vincent Bernat <vincent@bernat.im>
+Date: Thu, 7 Dec 2017 15:03:14 +0100
+Subject: Do not look for .a files for librdkafka/libyaml-cpp
+
+---
+ Server/CMakeLists.txt | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/Server/CMakeLists.txt b/Server/CMakeLists.txt
+index ece205f..09761e7 100644
+--- a/Server/CMakeLists.txt
++++ b/Server/CMakeLists.txt
+@@ -26,7 +26,7 @@ find_path(LIBYAML_CPP_INCLUDE_DIR
+ 
+ find_library(LIBYAML_CPP_LIBRARY
+         NAMES
+-        libyaml-cpp.a yaml-cpp
++        yaml-cpp
+         HINTS
+         ${HINT_ROOT_DIR}
+         PATH_SUFFIXES
+@@ -42,7 +42,7 @@ find_path(LIBRDKAFKA_INCLUDE_DIR
+ 
+ find_library(LIBRDKAFKA_LIBRARY
+         NAMES
+-        librdkafka.a rdkafka
++        rdkafka
+         HINTS
+         ${HINT_ROOT_DIR}
+         PATH_SUFFIXES
+@@ -51,7 +51,7 @@ find_library(LIBRDKAFKA_LIBRARY
+ 
+ find_library(LIBRDKAFKA_CPP_LIBRARY
+         NAMES
+-        librdkafka++.a rdkafka++
++        rdkafka++
+         HINTS
+         ${HINT_ROOT_DIR}
+         PATH_SUFFIXES

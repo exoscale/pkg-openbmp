@@ -1,0 +1,21 @@
+From: Vincent Bernat <vincent@bernat.im>
+Date: Thu, 7 Dec 2017 16:32:10 +0100
+Subject: Ensure correct PID is written to PID file
+
+---
+ Server/src/openbmp.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/Server/src/openbmp.cpp b/Server/src/openbmp.cpp
+index b7e629d..b8fc8bc 100644
+--- a/Server/src/openbmp.cpp
++++ b/Server/src/openbmp.cpp
+@@ -122,7 +122,7 @@ void daemonize() {
+ 
+     // Write PID to PID file if requested
+     if (pid_filename != NULL) {
+-        //pid_t pid = getpid();
++        pid_t pid = getpid();
+         ofstream pfile(pid_filename);
+ 
+         if (pfile.is_open()) {

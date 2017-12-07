@@ -1,0 +1,3 @@
+version=3
+opts=filenamemangle=s/.+\/v?(\d\S*)\.tar\.gz/openbmp-$1.tar.gz/ \
+  https://github.com/OpenBMP/openbmp/releases .*/v?(\d\S*)\.tar\.gz

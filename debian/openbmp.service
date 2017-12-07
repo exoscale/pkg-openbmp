@@ -1,0 +1,19 @@
+[Unit]
+Description=OpenBMP collector
+After=network.target
+ConditionPathExists=/etc/openbmp/openbmpd.conf
+Documentation=file:/usr/share/doc/openbmp/GETTING_STARTED.md
+
+[Service]
+Type=forking
+ExecStart=/usr/bin/openbmpd -c /etc/openbmp/openbmpd.conf -l /var/log/openbmpd/openbmpd.log -pid /var/run/openbmpd/openbmpd.pid
+LogsDirectory=openbmpd
+RuntimeDirectory=openbmpd
+PIDFile=/var/run/openbmpd/openbmpd.pid
+Restart=on-failure
+ProtectSystem=full
+User=_openbmpd
+Group=_openbmpd
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,8 @@
+/var/log/openbmp/openbmpd.log {
+  size 20M
+  missingok
+  rotate 7
+  compress
+  notifempty
+  nocreate
+}

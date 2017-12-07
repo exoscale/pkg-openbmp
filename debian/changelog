@@ -1,0 +1,5 @@
+openbmp (0.13.0-1) UNRELEASED; urgency=medium
+
+  * Initial release. Closes: #883771.
+
+ -- Vincent Bernat <bernat@debian.org>  Thu, 07 Dec 2017 14:16:18 +0100

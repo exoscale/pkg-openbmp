@@ -1,0 +1,12 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+override_dh_install:
+	dh_install
+	rm -rf debian/openbmp/usr/etc
+
+override_dh_installdocs:
+	dh_installdocs
+	rm -rf debian/openbmp/usr/share/doc/openbmp/INSTALL.md
